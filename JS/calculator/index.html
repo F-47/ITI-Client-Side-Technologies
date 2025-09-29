@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="history-container">
+      <div class="header">
+        <h1>History</h1>
+        <div class="delete-history">X</div>
+      </div>
+      <div class="calculator-history"></div>
+    </div>
+    <div class="calculator" role="application" aria-label="Calculator">
+      <div class="display" id="display" aria-live="polite">
+        <div class="value fade-right" id="value">0</div>
+      </div>
+      <div class="keys">
+        <button class="key fade-up func" data-action="clear">C</button>
+        <button class="key fade-up func" data-action="back">⌫</button>
+        <button class="key fade-up func" data-action="percent">%</button>
+        <button class="key fade-up op" data-action="/">÷</button>
+
+        <button class="key fade-up" data-action="7">7</button>
+        <button class="key fade-up" data-action="8">8</button>
+        <button class="key fade-up" data-action="9">9</button>
+        <button class="key fade-up op" data-action="*">×</button>
+
+        <button class="key fade-up" data-action="4">4</button>
+        <button class="key fade-up" data-action="5">5</button>
+        <button class="key fade-up" data-action="6">6</button>
+        <button class="key fade-up op" data-action="-">−</button>
+
+        <button class="key fade-up" data-action="1">1</button>
+        <button class="key fade-up" data-action="2">2</button>
+        <button class="key fade-up" data-action="3">3</button>
+        <button class="key fade-up op" data-action="+">+</button>
+
+        <button class="key fade-up" data-action=".">.</button>
+        <button class="key fade-up zero" data-action="0">0</button>
+        <button class="key fade-up equal" data-action="=">=</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
