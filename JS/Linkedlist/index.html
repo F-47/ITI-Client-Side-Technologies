@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedlist</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Linked List Visualizer</h1>
+
+    <div id="list" class="list-container"></div>
+
+    <div class="controls">
+      <input id="valueInput" type="number" placeholder="Enter value" />
+      <button onclick="appendNode()">Append</button>
+      <button onclick="prependNode()">Prepend</button>
+      <button onclick="popEndNode()">Pop End</button>
+      <button onclick="popBeginningNode()">Pop Beginning</button>
+      <button onclick="reverseList()">Reverse</button>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

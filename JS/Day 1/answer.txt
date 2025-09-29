@@ -1,0 +1,166 @@
+JavaScript Assignment – Lecture 1
+Instructions: Answer all questions. Write code where required and explain your answers clearly.
+
+Part 1: Variables and Scope
+
+1. Explain how var works in JavaScript. What is variable hoisting? Give a code example.
+   it is used to declare variables, when it is used the scope is not limited,it works with functional scope, if var declared outside of any fn it's global.
+   console.log(myVariable); // Output: undefined
+   var myVariable = "test";
+   console.log(myVariable); // Output: test
+
+2. What is the scope of a variable declared with var inside a function? What about inside a block (e.g., an if statement)?
+
+Inside a function:
+It is function-scoped. This means it is accessible anywhere within that function
+
+Inside a block:
+A variable declared with var inside a block is not block-scoped, but still function-scoped. This means even if you declare var inside an if block, the variable is accessible outside that block within the function.
+
+function example() {
+if (true) {
+var x = 10;
+}
+console.log(x); // Output: 10
+}
+
+example();
+
+if (true) {
+var y = 5;
+}
+console.log(y); // Output: 5
+
+3. List all JavaScript primitive types in ES5. Give an example of each.
+
+   1. integer
+   2. boolean
+   3. string
+   4. undefined
+   5. null
+
+4. What is the difference between a primitive type and an object type? Give an example where this difference is important.
+   Primitive types store simple values directly (like numbers, strings, booleans).
+   Object types store collections of values and methods and are accessed by reference.
+   If you copy a primitive, you get a new independent value. But if you copy an object, both variables point to the same object, so changing one affects the other.
+
+5. Create a number, string, and boolean using both literal and constructor syntax. Show the difference in their types using typeof.
+   literal:
+   x = 3 // number
+   y = "3" // string
+   z = false // boolean
+
+   constructor syntax
+   x = new Number(3) // object
+   y = new String("3") // object
+   z = new Boolean(true) // object
+
+6. Why is it generally recommended to use literals instead of constructors for primitive types?
+   If we just want to declare number, string or boolean without adding any methods to it as literals are just simple and more effecient. Also constructors are heavy and can cause unexpected behaviours
+
+7. Given the following code, what will be the output? Explain why.
+   var x = 123.4567;
+   console.log(x.toFixed(2)); // Output: "123.45"
+   console.log(x.toPrecision(4)); // Output: "123.4"
+
+8. What is NaN? How can you check if a value is NaN? Give an example.
+   NaN means No A Number, it's value that is resulted of unrepresentable mathematical operation or undefined for example of making undefined + string or dividing 0 by 0, we can check by using the isNan or Number.isNaN()
+   var result = "hello" / 2; // NaN
+   console.log(isNaN(result)); // true
+   console.log(Number.isNaN(result)); // true
+
+9. What is the difference between parseInt, parseFloat, and Number? Give an example for each.
+   parseInt to turn a string to integer also it ignores decimal points and anything after them.
+   parseFloat to turn a string to float including the decimal point if it exist.
+   Number convert value to number, by number i mean integer or float, Number tries to convert the entire string and returns NaN if the whole string is not a valid number.
+   x = parseInt("123")
+   y = parseFloat("12.3")
+   z = Number("2")
+
+10. What is the difference between implicit and explicit type casting? Give an example of each.
+
+Implicit Type: it happens from the prog language without our interaction.
+ex: var result = "5" + 2; // Output: 7
+
+Explicit Type: it happens when we manually convert from one value to another using built in fns or constructors like parseInt or Number for example.
+ex: var result = Number("5") + 2 // Output: 7
+
+11. What will be the result and type of the following expressions? Explain your answer.
+
+    - true + 5 (Output:6 (true is treated as number 1 in arithmetic operations))
+    - "10" - 2 (Output:8 (the minus converted the string to number))
+    - 12 - "1a" (Output:NaN (1a cannot be converted to a valid number))
+    - 5 / 0 (Output:INFINITY (Dividing a positive number by zero results in Infinity))
+    - 5 + undefined (Output:NAN (undefined cannot be converted to a valid number in addition))
+
+12. What will be logged to the console in the following code? Explain each step.
+    var a = "15.5"; // declaring variable a with value "15.5"
+    var b = +a; declaring a new variable b and converting the value of a to number by the addition operator
+    console.log(b, typeof b); // Output: 15.5 , number
+
+13. What will be the output of:
+    var result = 20 > true < 5 == 1;
+    console.log(result); // Output: true
+    Explain why.
+    it goes as follows:
+    is 20 > true -----> false
+    is false < 5 -----> true
+    is true == 1 -----> true
+
+14. Write a function that takes a string and returns true if it can be converted to a valid number, and false otherwise.
+    function canBeNumber(x){
+    return !isNan(Number(x))
+    }
+
+15. Write a program that prints all numbers from 1 to 20 using a while loop.
+    var x = 1
+    while (x <= 20) {
+    console.log(x)
+    x++
+    }
+16. Write a program that asks the user to enter numbers until they enter 0, using a do...while loop. After the loop ends, print the sum of all entered numbers (excluding 0).
+    var sum = 0;
+    var userGuess;
+
+do {
+userGuess = parseInt(prompt("Enter a number"));
+if (userGuess !== 0) {
+sum += userGuess;
+}
+} while (userGuess !== 0);
+
+console.log(sum);
+
+17. Write a program that takes a number from 1 to 7 and prints the corresponding day of the week using a switch statement. Use a for loop to test your program with all numbers from 1 to 7.
+
+function printDayOfWeek(num) {
+switch (num) {
+case 1:
+console.log("Monday");
+break;
+case 2:
+console.log("Tuesday");
+break;
+case 3:
+console.log("Wednesday");
+break;
+case 4:
+console.log("Thursday");
+break;
+case 5:
+console.log("Friday");
+break;
+case 6:
+console.log("Saturday");
+break;
+case 7:
+console.log("Sunday");
+break;
+default:
+console.log("Invalid number");
+}
+}
+
+for (let i = 1; i <= 7; i++) {
+printDayOfWeek(i);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .target-div {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      .class-a {
+        background-color: yellow;
+        color: black;
+      }
+      .class-b {
+        background-color: blue;
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Day4 DOM</h1>
+    <div id="my-div">
+      <p id="my-p">Hello ISI</p>
+    </div>
+    <form id="myForm" action="test.html">
+      <input type="text" id="my-input" placeholder="Type something..." />
+      <input
+        type="email"
+        name="user-email"
+        id="my-email"
+        placeholder="Type your email..."
+      />
+      <select name="user-country" id="my-select">
+        <option value="us">United States</option>
+        <option value="EG">Egypt</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+      <select id="my-country">
+        <option value="us">United States</option>
+        <option value="EG">Egypt</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <div class="target-div" id="div-2">
+      <h3>create element using js</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+        reiciendis!
+      </p>
+    </div>
+
+    <div id="wrapper">
+      <p id="first">First</p>
+      <p id="second">Second</p>
+    </div>
+    <section class="banners-container container">
+      <div class="images"></div>
+      <div class="arrow left icon">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+      <div class="arrow right icon">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <div class="control-buttons">
+        <i class="fa-solid fa-play icon start" onclick="continueInterval()"></i>
+        <i class="fa-solid fa-stop icon stop" onclick="stopInterval()"></i>
+      </div>
+    </section>
+    <form id="q32Form">
+      <div>
+        <input type="text" placeholder="Enter text" />
+      </div>
+      <div>
+        <input type="email" placeholder="Enter email" />
+      </div>
+      <div>
+        <input type="number" placeholder="Enter number" />
+      </div>
+    </form>
+    <div class="output"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

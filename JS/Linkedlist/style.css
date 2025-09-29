@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f9;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 60px;
+  margin-bottom: 20px;
+}
+
+.node {
+  background: white;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.arrow {
+  margin: 0 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls input {
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  padding: 8px 12px;
+  margin: 3px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background: #0056b3;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.reverse-anim {
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

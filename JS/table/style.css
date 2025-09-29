@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  margin-bottom: 500px;
+}
+
+/* Start Form  */
+form {
+  width: 100%;
+}
+form h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+form .input-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+form .input-item label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+form .input-item input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(221, 221, 221);
+}
+form button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #4caf4f46;
+  border-color: #4caf50;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4caf50;
+  transition: all 0.3s;
+}
+form button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+/* End Form  */
+
+/* Start table  */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  min-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+thead th {
+  cursor: pointer;
+  user-select: none;
+}
+thead th.active {
+  color: rgb(0, 81, 255);
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+/* End table  */
+
+/* linkedlist  */
+
+input,
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.node {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  min-width: 50px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.node:hover {
+  transform: scale(1.1);
+}
+
+.arrow::after {
+  content: "➝";
+  margin-left: 15px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+/* last node (null) different style */
+.null-node {
+  background: #e74c3c;
+  font-size: 14px;
+  font-weight: normal;
+}

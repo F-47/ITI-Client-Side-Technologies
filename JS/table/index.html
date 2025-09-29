@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="userForm">
+      <h3>Add User</h3>
+      <div class="input-item">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Type the name" required />
+      </div>
+
+      <div class="input-item">
+        <label for="position">Position</label>
+        <input
+          type="text"
+          name="position"
+          placeholder="Type the position"
+          required
+        />
+      </div>
+
+      <div class="input-item">
+        <label for="office">Office</label>
+        <input
+          type="text"
+          name="office"
+          placeholder="Type the office"
+          required
+        />
+      </div>
+
+      <div class="input-item">
+        <label for="age">Age</label>
+        <input type="number" name="age" placeholder="Type the age" required />
+      </div>
+
+      <div class="input-item">
+        <label for="startDate">Start Date</label>
+        <input type="date" name="startDate" required />
+      </div>
+
+      <button type="submit">Add User</button>
+    </form>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th data-key="name">Name 🔽</th>
+            <th data-key="position">Position 🔽</th>
+            <th data-key="office">Office 🔽</th>
+            <th data-key="age">Age 🔽</th>
+            <th data-key="startDate">Start Date 🔽</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="linkedlist">
+      <h1>Linked List Visualizer</h1>
+      <input type="number" id="valueInput" placeholder="Enter value" />
+      <button onclick="appendNode()">Append</button>
+      <button onclick="prependNode()">Prepend</button>
+      <button onclick="popNode()">Pop</button>
+      <div id="list"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
