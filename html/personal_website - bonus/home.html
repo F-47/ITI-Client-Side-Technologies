@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        position: relative;
+      }
+      .name {
+        text-align: center;
+      }
+      .personal_img {
+        position: absolute;
+        top: 0;
+        inset-inline-end: 0;
+        border-radius: 100%;
+      }
+      .label {
+        color: orange;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .value {
+        color: green;
+        font-size: 1.2em;
+      }
+      .email-link {
+        color: red;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+      .faculty-link {
+        color: blue;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+      .about-text {
+        font-family: Verdana, sans-serif;
+        font-size: 1em;
+        color: black;
+      }
+      .chevron {
+        position: absolute;
+        bottom: 0;
+        inset-inline-end: 0;
+      }
+      footer {
+        background-color: rgb(199, 199, 199);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="name">Fares Galal Abomadawy</h1>
+    <div>
+      <h2>My Personal Info</h2>
+      <img
+        src="./assets/my_img.webp"
+        class="personal_img"
+        alt="Fares Image"
+        width="200"
+      />
+      <ul>
+        <li><span class="label">Age:</span> <span class="value">23</span></li>
+        <li>
+          <span class="label">Address:</span>
+          <span class="value">Alexandria, Egypt</span>
+        </li>
+        <li>
+          <span class="label">Phone:</span>
+          <ol type="a">
+            <li><span class="value">01070325388</span></li>
+            <li><span class="value">01274159111</span></li>
+          </ol>
+        </li>
+        <li>
+          <span class="label">Faculty:</span>
+          <a
+            href="https://www.facebook.com/FCDS.AlexU/?locale=ar_AR"
+            target="_blank"
+            class="faculty-link"
+          >
+            Computer and Data Science, Alexandria University
+          </a>
+        </li>
+        <li>
+          <span class="label">Graduation Year:</span>
+          <span class="value">2024</span>
+        </li>
+        <li id="hobbies">
+          <span class="label">Hobbies:</span>
+          <ol>
+            <li><span class="value">Gaming</span></li>
+            <li><span class="value">Coding</span></li>
+          </ol>
+        </li>
+        <li>
+          <a href="mailto:faresgalal09@gmail.com" class="email-link"
+            >Send Me Email</a
+          >
+        </li>
+        <li>
+          <span class="label">About Me:</span>
+          <p class="about-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, dolores
+            necessitatibus eos enim iure alias eligendi perspiciatis porro
+            dignissimos at cupiditate quisquam quo optio, fuga asperiores
+            repudiandae impedit recusandae in laudantium, voluptates quos. Ipsam
+            ipsa dolorem dolorum vitae eaque ducimus explicabo ea, officia in
+            consequatur, nemo natus voluptas aliquid enim distinctio possimus
+            necessitatibus excepturi? Sint odit sunt voluptatem porro architecto
+            atque reprehenderit, delectus placeat esse explicabo ducimus autem
+            quis animi quaerat ratione unde laudantium quia ea quibusdam! Quas
+            harum asperiores voluptatem aspernatur incidunt ad unde temporibus,
+            ut voluptate illum accusamus officiis dolore praesentium, commodi
+            pariatur, numquam aliquam libero qui! Ratione pariatur accusamus
+            rerum vitae fuga adipisci facilis alias porro quae, aliquid eligendi
+            quod perferendis sunt error. Veniam, est blanditiis deleniti a
+            commodi quo impedit repellat ea odit fuga culpa incidunt amet ad
+            harum modi ullam ab, vitae ipsa rerum. Iste accusantium, tenetur
+            fugiat nihil vel sit voluptates placeat eveniet maxime. Alias, iste
+            inventore magnam ratione voluptas aliquid adipisci non ipsam,
+            suscipit corrupti fuga sed beatae quasi exercitationem in dicta iure
+            incidunt, quas ad rerum autem quae aut blanditiis voluptatum.
+            Delectus quas eius, beatae fuga minima magnam error aperiam cum?
+            Dicta harum quisquam temporibus incidunt fugiat, ut veritatis vel
+            soluta repudiandae voluptates aliquam ex nobis, quas at! Eius
+            voluptas harum est, possimus consectetur sint, natus, earum
+            architecto inventore asperiores laudantium. Debitis eligendi odit
+            molestias tenetur aperiam ipsam est, consequuntur exercitationem
+            aliquid error totam perferendis maxime quasi hic deserunt mollitia
+            pariatur aliquam dicta asperiores. Nam autem nostrum pariatur animi
+            atque commodi! Atque?
+          </p>
+          <p class="about-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, dolores
+            necessitatibus eos enim iure alias eligendi perspiciatis porro
+            dignissimos at cupiditate quisquam quo optio, fuga asperiores
+            repudiandae impedit recusandae in laudantium, voluptates quos. Ipsam
+            ipsa dolorem dolorum vitae eaque ducimus explicabo ea, officia in
+            consequatur, nemo natus voluptas aliquid enim distinctio possimus
+            necessitatibus excepturi? Sint odit sunt voluptatem porro architecto
+            atque reprehenderit, delectus placeat esse explicabo ducimus autem
+            quis animi quaerat ratione unde laudantium quia ea quibusdam! Quas
+            harum asperiores voluptatem aspernatur incidunt ad unde temporibus,
+            ut voluptate illum accusamus officiis dolore praesentium, commodi
+            pariatur, numquam aliquam libero qui! Ratione pariatur accusamus
+            rerum vitae fuga adipisci facilis alias porro quae, aliquid eligendi
+            quod perferendis sunt error. Veniam, est blanditiis deleniti a
+            commodi quo impedit repellat ea odit fuga culpa incidunt amet ad
+            harum modi ullam ab, vitae ipsa rerum. Iste accusantium, tenetur
+            fugiat nihil vel sit voluptates placeat eveniet maxime. Alias, iste
+            inventore magnam ratione voluptas aliquid adipisci non ipsam,
+            suscipit corrupti fuga sed beatae quasi exercitationem in dicta iure
+            incidunt, quas ad rerum autem quae aut blanditiis voluptatum.
+            Delectus quas eius, beatae fuga minima magnam error aperiam cum?
+            Dicta harum quisquam temporibus incidunt fugiat, ut veritatis vel
+            soluta repudiandae voluptates aliquam ex nobis, quas at! Eius
+            voluptas harum est, possimus consectetur sint, natus, earum
+            architecto inventore asperiores laudantium. Debitis eligendi odit
+            molestias tenetur aperiam ipsam est, consequuntur exercitationem
+            aliquid error totam perferendis maxime quasi hic deserunt mollitia
+            pariatur aliquam dicta asperiores. Nam autem nostrum pariatur animi
+            atque commodi! Atque?
+          </p>
+        </li>
+        <hr />
+      </ul>
+    </div>
+    <footer>
+      <nav>
+        <a href="./welcome.html">Welcome</a>
+        <a href="./home.html">Home</a>
+        <a href="#">About</a>
+        <a href="mailto:faresgalal09@gmail.com">Contact Me</a>
+        <a href="./imageMap.html">Image Map</a>
+      </nav>
+      <div>
+        <h2>My Social Profile</h2>
+        <div
+          class="links"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+          "
+        >
+          <a href="https://www.facebook.com" target="_blank">
+            <img
+              src="./assets/facebook_icon.png"
+              alt="Facebook"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <img
+              src="./assets/linkedin_icon.png"
+              alt="LinkedIn"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a href="https://fares-portfolio-47.vercel.app/" target="_blank">
+            <img
+              src="./assets/portfolio_icon.png"
+              alt="Portfolio"
+              width="30"
+              height="30"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <a href="./home.html#hobbies" class="chevron"
+      ><img src="./assets/chevron.png" alt="Go Up" width="30" height="30"
+    /></a>
+    <div style="text-align: center">
+      Copyrights &copy; are reserved to Fares
+    </div>
+  </body>
+</html>
